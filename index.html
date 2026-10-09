@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hook bank Flossie Neo</title>
+<style>
+:root{--bg:#fff3f7;--card:#ffffff;--tx:#3b1a28;--mut:#9a6b7e;--bd:#f8d3e1;--pk:#e8508a;--pk2:#ff8fb8;--pkbg:#ffe0ec;--pkdk:#b3205a;--sh:0 4px 16px rgba(232,80,138,.12)}
+@media(prefers-color-scheme:dark){:root{--bg:#2a111d;--card:#3a1829;--tx:#ffe8f1;--mut:#d29ab3;--bd:#5a2a40;--pk:#ff7fae;--pk2:#ff9fc4;--pkbg:#51203a;--pkdk:#ffb3d0;--sh:none}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:1050px;margin:0 auto;padding:24px 16px 56px}
+header{background:linear-gradient(135deg,var(--pk),var(--pk2));color:#fff;border-radius:18px;padding:22px 22px 20px;margin-bottom:18px;box-shadow:var(--sh)}
+header h1{margin:0 0 4px;font-size:24px}
+header p{margin:0;opacity:.95;font-size:14px}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+.lab{font-size:12px;color:var(--mut);font-weight:700;margin:10px 0 6px;letter-spacing:.04em;text-transform:uppercase}
+button.f{border:1.5px solid var(--bd);background:var(--card);color:var(--tx);padding:7px 14px;border-radius:99px;cursor:pointer;font:inherit;font-size:13.5px}
+button.f:hover{border-color:var(--pk)}
+button.f.on{background:var(--pk);border-color:var(--pk);color:#fff}
+.cnt{color:var(--mut);font-size:13px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1.5px solid var(--bd);border-radius:16px;padding:14px 16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:8px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;background:var(--pkbg);color:var(--pkdk);font-weight:600}
+.tag.t{background:transparent;border:1.5px solid var(--pk2);color:var(--pk)}
+.hk{margin:0;white-space:pre-line}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:4px}
+.meta{font-size:12px;color:var(--mut)}
+button.cp{border:none;background:var(--pkbg);color:var(--pkdk);padding:6px 14px;border-radius:99px;cursor:pointer;font:inherit;font-size:13px;font-weight:600}
+button.cp:hover{background:var(--pk);color:#fff}
+.ang{grid-column:1/-1;margin:10px 0 0}
+.ang h2{margin:0;font-size:17px;color:var(--pkdk)}
+.ang p{margin:0;color:var(--mut);font-size:13.5px}
+footer{margin-top:22px;color:var(--mut);font-size:13px}
+</style></head><body><div class="w">
+<header><h1>Hook bank · Flossie Neo</h1><p>Hook CONVERT cho 3 tệp ưu tiên, chia theo 4 angle. Bấm "Sao chép" để lấy nội dung.</p></header>
+
+<div class="lab">Angle</div><div class="ctl" id="fa"></div>
+<div class="lab">Tệp</div><div class="ctl" id="ft"></div>
+<div class="cnt" id="cnt"></div>
+<div class="grid" id="g"></div>
+<footer>Nội dung hook do team viết. Trước khi quay, kiểm tra lại các từ nhấn mạnh như "độc lạ", "sạch tuốt", "sạch bóng" với quy định claim của TikTok.</footer>
+</div>
+<script>
+const A=[
+{k:"1",n:"Angle 1 · USP khác biệt gắn với pain",d:"Đẩy USP lên trước, nối với pain của từng tệp."},
+{k:"2",n:"Angle 2 · Chi phí hợp lý: spa răng miệng tại nhà",d:"So chi phí sử dụng với khoản tiền khách vẫn đang chi."},
+{k:"3",n:"Angle 3 · Đáng tiền trong cùng phân khúc",d:"So sánh Neo với tăm nước truyền thống."},
+{k:"4",n:"Angle 4 · Tiện lợi, dễ duy trì",d:"Nhỏ gọn, ít thao tác, hợp routine."}];
+const T={H:"Hôi miệng",O:"N-OC-01 (chăm ngoại hình, bỏ quên răng miệng)",B:"Niềng răng"};
+const H=[
+["1","H","","Cái đầu chữ U độc lạ này chuyên dành cho bà nào làm đủ các bước từ đánh răng, súc miệng đến nhai kẹo gum rồi mà hơi thở vẫn cứ thum thủm nhá. Hai tia nước của em Flossie Neo này xịt đồng thời làm sạch tuốt cả 2 mặt răng lẫn viền nướu trong ngoài chỉ sau một lượt lia. Dùng xong cảm giác khoang miệng nó thoáng sạch, thơm tho hẳn ra luôn ấy!"],
+["1","O","","Skincare 7 bước, makeup cả tiếng đồng hồ rất chỉn chu nhưng răng miệng lại chỉ đánh qua loa cho xong? Mấy bà nghía thử cái đầu chữ U 2 chiều siêu độc lạ nhà Flossie Neo này xem. Đúng một đường lia 20 giây là sạch bóng cả mặt trong lẫn mặt ngoài, thêm ngay vào routine mà chẳng tốn thêm tí thời gian nào!"],
+["1","B","","Cái đầu chữ U 2 chiều độc lạ này là dành cho team niềng răng ghét việc cặm cụi, loay hoay dùng tăm nước 1 chiều làm sạch từng mắc cài nè! Em này sẽ ôm trọn 2 mặt răng luồn tia nước qua hệ thống mắc cài để làm sạch cả mặt ngoài lẫn mặt trong cùng một lúc, tiết kiệm bao công mỏi tay xoay trở lun đó!"],
+["2","H","Tiền kẹo gum, xịt thơm miệng","Mấy bà thử tính tiền mua kẹo gum với xịt thơm miệng mỗi tháng xem có khi đủ rước luôn một em Flossie Neo về nhà ấy chứ! Thay vì cứ phải tìm cách che mùi tạm thời thì đầu tư thêm cái đầu chữ U 2 chiều này để vệ sinh kẽ răng mỗi ngày có phải hợp lý hơn không? Một lần sắm mà dùng dài dài, tính ra quá là kinh tế!"],
+["2","O","Trà sữa, skincare","Một cốc trà sữa 60 nghìn thì chốt không cần nghĩ, mà một em spa răng miệng mini tại nhà dùng cả năm lại thấy xót ví là sao mấy bà? Nghía ngay Flossie Neo này đi, có hẳn đầu U phun nước 2 chiều với 50 mức lực chỉnh theo nhu cầu. Chia tiền máy ra từng ngày thì còn chưa bằng một cốc trà sữa, đúng kiểu đầu tư nhan sắc từ trong ra ngoài luôn ấy!"],
+["2","B","Chi phí niềng","Bỏ mấy chục triệu đi niềng răng rồi mà tiếc thêm một khoản nhỏ để chăm sóc cái bộ mắc cài thì hơi ngược đời đấy mấy bà ơi! Flossie Neo có tận 50 mức lực tùy chỉnh với đầu U phun nước 2 chiều, hỗ trợ vệ sinh quanh răng và mắc cài ngay tại nhà. Tính chi phí sử dụng mỗi ngày thì còn chẳng đáng bao nhiêu so với tiền niềng!"],
+["3","H","Một tia và hai tia","Ủa cùng bỏ ra từng ấy tiền mua tăm nước mà mấy bà vẫn chọn cái đầu phun một chiều, phải xoay tới xoay lui để vệ sinh từng mặt răng á? Thử nghía cái đầu chữ U 2 chiều nhà Flossie Neo này đi, hai tia nước xịt đồng thời từ trong ra ngoài, hỗ trợ làm sạch cả những vùng kẽ dễ sót cặn. Nhất là bà nào đánh răng kỹ lắm mà vẫn lo hơi thở có mùi thì càng nên xem thử!"],
+["3","O","Mua đồ phải đáng tiền","Skincare thì biết so bảng thành phần từng tí một, mà mua tăm nước lại cứ nghĩ con nào cũng như con nào là sao mấy bà? Cùng phân khúc tầm trung mà Flossie Neo có hẳn đầu chữ U phun 2 chiều, tận 50 mức lực tùy chỉnh, còn ghi nhớ chế độ đã dùng nữa. Bỏ cùng một số tiền thì phải xem em nào mang lại nhiều tiện ích cho routine hơn chứ!"],
+["3","B","50 mức điều chỉnh","Team niềng răng đừng có thấy tăm nước nào rẻ rẻ là chốt vội nhá, vì cái đáng xem là đầu phun với khả năng chỉnh lực nước ấy! Như Flossie Neo này có tận 50 mức điều chỉnh, hôm nào nướu nhạy cảm thì chọn mức nhẹ phù hợp, lại có đầu chữ U phun 2 chiều hỗ trợ vệ sinh quanh mắc cài nữa. Cùng tầm tiền mà được linh hoạt như này thì đáng để cân nhắc đấy!"],
+["4","H","Routine buổi sáng","Sáng nào cũng đánh răng súc miệng đủ kiểu mà cứ nhắc đến vệ sinh kẽ răng là mấy bà lại kêu không có thời gian đúng không? Thế thì nghía thử Flossie Neo với cái đầu U phun nước 2 chiều này đi, vệ sinh cả mặt trong lẫn mặt ngoài răng đồng thời, đỡ phải cặm cụi xoay đầu phun từng phía. Máy còn ghi nhớ chế độ nữa, sáng vội đi làm cũng tiện lấy ra dùng!"],
+["4","O","Skincare routine","Skincare 7749 bước đã hết cả thanh xuân rồi mà chăm răng miệng còn phải thêm một đống thao tác nữa thì đúng là muốn bỏ cuộc luôn mấy bà ạ! May mà có em Flossie Neo nhỏ gọn này, đầu chữ U phun 2 chiều giúp vệ sinh hai mặt răng cùng lúc, lại nhớ sẵn mức lực đã dùng. Thêm một bước chăm răng miệng vào beauty routine mà không phải bày vẽ cầu kỳ!"],
+["4","B","Vệ sinh sau ăn","Team niềng răng chắc hiểu cái cảnh ăn xong miếng thịt mà mắc cài giữ lại như của để dành nhỉ? Đã phải vệ sinh kỹ hơn người ta rồi mà dùng tăm nước còn phải xoay trái xoay phải thì oải thật sự! Em Flossie Neo này có đầu U phun 2 chiều, hỗ trợ vệ sinh cả hai phía răng đồng thời, lại nhỏ gọn nên tiện lấy ra dùng hằng ngày hơn nhiều!"]];
+let fa="all",ft="all";
+function pills(id,items,cur,cb){const e=document.getElementById(id);e.innerHTML="";items.forEach(([k,l])=>{const b=document.createElement("button");b.className="f"+(k===cur?" on":"");b.textContent=l;b.onclick=()=>cb(k);e.appendChild(b);});}
+function copy(t,b){const done=()=>{const o=b.textContent;b.textContent="Đã chép";setTimeout(()=>b.textContent=o,1200);};
+ try{navigator.clipboard.writeText(t).then(done,()=>fb(t,done));}catch(e){fb(t,done);}}
+function fb(t,done){try{const x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();document.execCommand("copy");document.body.removeChild(x);done();}catch(e){}}
+function render(){
+ pills("fa",[["all","Tất cả"]].concat(A.map(a=>[a.k,"Angle "+a.k])),fa,k=>{fa=k;render();});
+ pills("ft",[["all","Cả 3 tệp"],["H","Hôi miệng"],["O","N-OC-01"],["B","Niềng răng"]],ft,k=>{ft=k;render();});
+ const rows=H.filter(h=>(fa==="all"||h[0]===fa)&&(ft==="all"||h[1]===ft));
+ document.getElementById("cnt").textContent=rows.length+" hook";
+ const g=document.getElementById("g");g.innerHTML="";let last="";
+ rows.forEach(h=>{
+  if(h[0]!==last){last=h[0];const a=A.find(x=>x.k===h[0]);const d=document.createElement("div");d.className="ang";d.innerHTML="<h2>"+a.n+"</h2><p>"+a.d+"</p>";g.appendChild(d);}
+  const c=document.createElement("div");c.className="card";
+  c.innerHTML='<div class="tags"><span class="tag">Angle '+h[0]+'</span><span class="tag t">'+T[h[1]]+'</span>'+(h[2]?'<span class="tag t">'+h[2]+'</span>':'')+'</div><p class="hk"></p><div class="row"><span class="meta">'+h[3].length+' ký tự</span><button class="cp">Sao chép</button></div>';
+  c.querySelector(".hk").textContent=h[3];
+  const b=c.querySelector(".cp");b.onclick=()=>copy(h[3],b);
+  g.appendChild(c);});
+}
+render();
+</script></body></html>
